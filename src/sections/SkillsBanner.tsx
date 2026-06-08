@@ -35,7 +35,7 @@ export const SkillsBanner = () => {
                   <div
                     key={skill}
                     className="uppercase items-center text-[#8DAFCB]"
-                  >
+                  > 
                     <code className="text-xl">"{skill}",</code>
                   </div>
                 ))}
