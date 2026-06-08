@@ -12,19 +12,22 @@ export const Projects = () => {
   const portfolioProjects = [
     {
       name: "Northdale Loans",
-      description:
-        "A React-based loan paydown calculator for a fictional company that helps users visualize their loan repayment journey. Users are able to input their loan details and see a breakdown of their payments and interest, and compare different loan paydown strategies to determine the best approach for their financial goals.",
-      link: "https://www.google.com",
-      github: "https://www.github.com",
+      description: [
+        "A React-based loan paydown calculator that helps users visualize their loan repayment journey. Users are able to input their loan details and see a breakdown of their payments and interest, and compare different loan paydown strategies to determine the best approach for their financial goals.",
+      ],
+      link: "https://chaydenr.github.io/NorthdaleLoans/",
+      github: "https://github.com/chaydenr/NorthdaleLoans",
       languages: ["React", "TypeScript", "Chart.js", "SASS"],
       image: northdaleLoansImage,
     },
     {
       name: "Task Tracker",
-      description:
+      description: [
         "A full-stack task management application built with a React frontend and C# backend that allows users to create, update, and track their daily tasks. The application features a user-friendly interface, enabling users to organize their tasks efficiently.",
-      link: "https://www.google.com",
-      github: "https://www.github.com",
+        "Note: Due to limitations in GitHub Pages' hosting ablitites, this application needs to run locally in order to run the C# backend.",
+      ],
+      link: "",
+      github: "https://github.com/chaydenr/task-tracker",
       languages: ["React", "TypeScript", "C#"],
       image: toDoListImage,
     },
@@ -84,9 +87,12 @@ export const Projects = () => {
                   {selectedProject.name}
                 </h3>
                 <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
-                <p className="gap-4 mt-4 md:mt-5 md:text-base text-white/50">
-                  {selectedProject.description}
+                {selectedProject.description.map((element,) => 
+  <p className="gap-4 mt-4 md:mt-5 md:text-base text-white/50">
+                  {element}
                 </p>
+            )   } 
+                
                 <div>
                   {selectedProject.languages.map((lang) => (
                     <div
@@ -102,12 +108,14 @@ export const Projects = () => {
                     </div>
                   ))}
                 </div>
-                <a href={selectedProject.link}>
-                  <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 md:mt-10 md:mr-5">
-                    <span>View Project</span>
-                    <ArrowUpRightIcon className="size-4" />
-                  </button>
-                </a>
+                {selectedProject.link !== "" && (
+                  <a href={selectedProject.link}>
+                    <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 md:mt-10 md:mr-5">
+                      <span>View Project</span>
+                      <ArrowUpRightIcon className="size-4" />
+                    </button>
+                  </a>
+                )}
                 <a href={selectedProject.github}>
                   <button className="bg-gray-950 text-white h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-4 md:mt-5">
                     <span>View Source Code</span>
