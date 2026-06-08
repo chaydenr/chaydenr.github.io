@@ -3,6 +3,7 @@ import {Header} from './sections/Header.tsx'
 import { HeroSection } from './sections/Hero.tsx'
 import { SkillsBanner } from './sections/SkillsBanner.tsx';
 import { Projects } from './sections/Projects.tsx';
+import { Contact } from './sections/Contact.tsx';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <HeroSection />
       <SkillsBanner />
       <Projects />
+      <Contact />
     </div>
   )
 }
