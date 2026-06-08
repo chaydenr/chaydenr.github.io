@@ -28,14 +28,14 @@ export const SkillsBanner = () => {
           <div className="w-1 bg-slate-950" />
         </div>
         <div className="[mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)] overflow-x-hidden">
-          <div className="inline-flex px-10 gap-10 animate-move-left ">
+          <div className="inline-flex pr-10 gap-10 animate-move-left">
             {[...new Array(2)].fill(0).map((_, i) => (
               <Fragment key={i}>
                 {skills.map((skill) => (
                   <div
                     key={skill}
                     className="uppercase items-center text-[#8DAFCB]"
-                  >
+                  > 
                     <code className="text-xl">"{skill}",</code>
                   </div>
                 ))}
