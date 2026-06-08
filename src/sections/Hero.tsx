@@ -61,8 +61,8 @@ export const HeroSection = () => {
           </h1>
 
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            I specialize in frontend UX/UI development, and have a passion for
-            crafting engaging and beautiful applications.
+            I am a UI Developer who loves to blend creativity and technology to develop
+            beautiful, engaging applications.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
