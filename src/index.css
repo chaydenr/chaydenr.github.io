@@ -1,7 +1,7 @@
-@import url('https://googleapis.com');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @layer base {
   .nav-item{
@@ -13,12 +13,26 @@
   }
 }
 
-:root {
-  --font-sans: "Inter", sans-serif;
-  --font-serif: "Calistoga", serif;
-  --font-code: "Fira Code", monospace;
+@layer utilities {
+  .container {
+    @apply lg:max-w-5xl;
+  }
 }
+
 
 html, body {
   @apply bg-slate-900 overscroll-none;
+}
+
+@font-face {
+  font-family: "GoogleSans";
+  src: url("./assets/fonts/Google_Sans_Code,Inter/Google_Sans_Code/static/GoogleSansCode-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Calistoga", serif;
+  --font-google: "GoogleSans", sans-serif;
 }

@@ -2,6 +2,7 @@ import './App.css'
 import {Header} from './sections/Header.tsx'
 import { HeroSection } from './sections/Hero.tsx'
 import { SkillsBanner } from './sections/SkillsBanner.tsx';
+import { Projects } from './sections/Projects.tsx';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <HeroSection />
       <SkillsBanner />
+      <Projects />
     </div>
   )
 }
