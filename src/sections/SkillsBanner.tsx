@@ -15,7 +15,7 @@ export const SkillsBanner = () => {
   ];
 
   return (
-    <div>
+    <div id="projects">
       <div className="bg-gradient-to-l from-emerald-300 to-sky-400 height-[200px] h-[2px]" />
       <div className="flex gap-10 py-[15px] bg-slate-950 items-center">
         <div className="absolute z-10">
